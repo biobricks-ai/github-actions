@@ -1,4 +1,4 @@
-name: Add latest tag to new release
+name: latest-tag
 on:
   release:
     types: [push]
