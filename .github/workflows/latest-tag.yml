@@ -1,8 +1,7 @@
 name: latest-tag
-on:
-  - push
-  - release:
-    types: [published]
+on: [push]
+  # - release:
+  #   types: [published]
 
 jobs:
   run:
