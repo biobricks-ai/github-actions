@@ -1,13 +1,13 @@
 name: latest-tag
 on:
-  - release:
+  release:
     types: [published]
 
 permissions: write-all
 
 jobs:
   run:
-    name: Run local action
+    name: update latest tag
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
