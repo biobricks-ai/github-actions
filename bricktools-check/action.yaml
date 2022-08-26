@@ -2,11 +2,6 @@ name: "Run bricktools check"
 description: "Runs bricktools::check on the current brick"
 runs:
   using: 'docker'
-  image: 'docker://insilica/biobricks:latest'
-  steps:
-    - name: Check out repository code
-      uses: actions/checkout@v3
-    
-    - name: bricktools check
-      run: bricktools::check(".")
-      shell: Rscript {0}
+  image: 'docker://insilica/biobricks:latest'   
+  args: '${{ github.event.repository }}'
+  entrypoint: 'bricktools-check.sh'
