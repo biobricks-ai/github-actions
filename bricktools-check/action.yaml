@@ -1,8 +1,12 @@
 name: "Run bricktools check"
 description: "Runs bricktools::check on the current brick"
+inputs:
+  repo:
+    description: 'which repo to test'
+    default: ${{ github.event.repository }}
 runs:
   using: 'docker'
   image: 'docker://insilica/biobricks:latest'   
   args: 
-    - ${{ github.event.repository }}
+    - ${{ inputs.repo }}
   entrypoint: 'bricktools-check.sh'
