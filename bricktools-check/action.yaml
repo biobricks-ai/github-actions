@@ -3,4 +3,4 @@ description: "Runs bricktools::check on the current brick"
 runs:
   using: 'docker'
   image: 'docker://insilica/biobricks:latest'
-  entrypoint: 'bricktools-check.sh'
+  entrypoint: '/github-action-bricktools-check.sh'
