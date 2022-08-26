@@ -1,7 +1,7 @@
 # github-actions
-A repository for github actions used across biobricks
+Biobricks github actions
 
-Use the below for your bricktools check action
+## Run bricktools::check on this brick
 
 ```yaml
 name: "Run bricktools check"
