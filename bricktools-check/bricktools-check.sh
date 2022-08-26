@@ -1,3 +1,3 @@
 echo BRICKTOOLS check
-echo "ARG $1"
+echo $GITHUB_REPOSITORY
 # Rscript -e 'bricktools::check(.)'
