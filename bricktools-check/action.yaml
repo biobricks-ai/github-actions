@@ -1,9 +1,12 @@
-name: "Run bricktools check"
-description: "Runs bricktools::check on the current brick"
-runs:
-  using: "docker"
-  image: insilica/biobricks:2.0
-  steps:
+name: bricktools-check
+on: [push]
+jobs:
+  bricktools-check:
+    runs-on: ubuntu-latest
+    container: insilica/biobricks:latest
+    env:
+      GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
+    steps:
     - name: Check out repository code
       uses: actions/checkout@v3
 
